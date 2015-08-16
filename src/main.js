@@ -1,3 +1,3 @@
-var App = "Hello from Browserify";
+var App = "Hello from Browserify and Reactify";
 
 module.exports = App;
