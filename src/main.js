@@ -2,6 +2,7 @@ $ = jQuery = require('jquery');
 var React = require('react');
 var Home = require('./components/pages/Home');
 var About = require('./components/pages/About');
+var Header = require('./components/common/Header');
 
 var App = React.createClass({
   render: function () {
@@ -12,6 +13,7 @@ var App = React.createClass({
     }
     return (
         <div>
+          <Header/>
           <Child/>
         </div>
     );
