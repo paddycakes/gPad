@@ -2,19 +2,24 @@ module.exports = {
   users:
       [
         {
-          id: 'cory-house',
-          firstName: 'Cory',
-          lastName: 'House'
+          username: 'paddycakes',
+          firstName: 'Patrick',
+          lastName: 'Gallagher'
         },
         {
-          id: 'scott-allen',
-          firstName: 'Scott',
-          lastName: 'Allen'
+          username: 'martindow',
+          firstName: 'Martin',
+          lastName: 'Dow'
         },
         {
-          id: 'dan-wahlin',
+          username: 'danosborne',
           firstName: 'Dan',
-          lastName: 'Wahlin'
+          lastName: 'Osborne'
+        },
+        {
+          username: 'lloydich',
+          firstName: 'Lloyd',
+          lastName: 'Lane'
         }
       ]
 };
