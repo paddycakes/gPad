@@ -1,17 +1,19 @@
 var React = require('react');
+var Rputer = require('react-router');
+var Link = Router.Link;
 
 var Header = React.createClass({
   render: function () {
     return (
         <nav className="navbar navbar-default">
           <div className="container-fluid">
-            <a href="/" className="navbar-brand">
+            <Link to="app" className="navbar-brand">
                 <img src="images/github-logo-small.png" />
-            </a>
+            </Link>
               <ul className="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/#users">Users</a></li>
-                <li><a href="/#about">About</a></li>
+                <li><Link to="app">Home</Link></li>
+                <li><Link to="users">Users</Link></li>
+                <li><Link to="about">About</Link></li>
               </ul>
           </div>
         </nav>

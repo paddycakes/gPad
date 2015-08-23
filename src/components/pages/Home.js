@@ -4,7 +4,7 @@ var Home = React.createClass({
   render: function () {
     return (
         <div className="jumbotron">
-          <h1>React Tooling</h1>
+          <h1>gPad - Github User Management Console</h1>
           <p>React, React Router, and Flux for ultra responsive web apps.</p>
         </div>
     );
