@@ -4,13 +4,18 @@ var DefaultRoute = Router.DefaultRoute;
 var NotFoundRoute = Router.NotFoundRoute;
 var Redirect = Router.Redirect;
 var Route = Router.Route;
+var App = require('./components/App');
+var HomePage = require('./components/pages/Home');
+var UserPage = require('./components/pages/User');
+var AboutPage = require('./components/pages/About');
+var NotFoundPage = require('./components/pages/NotFound');
 
 var routes = (
-    <Route name="app" path="/" handler={require('./components/App')}>
-      <DefaultRoute handler={require('./components/pages/Home')} />
-      <Route name="users" handler={require('./components/pages/User')} />
-      <Route name="about" handler={require('./components/pages/About')} />
-      <NotFoundRoute handler={require('./components/pages/NotFound')} />
+    <Route name="app" path="/" handler={App}>
+      <DefaultRoute handler={HomePage} />
+      <Route name="users" handler={UserPage} />
+      <Route name="about" handler={AboutPage} />
+      <NotFoundRoute handler={NotFoundPage} />
       <Redirect from="about*" to="about" />
     </Route>
 );
