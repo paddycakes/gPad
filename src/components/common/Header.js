@@ -1,5 +1,5 @@
 var React = require('react');
-var Rputer = require('react-router');
+var Router = require('react-router');
 var Link = Router.Link;
 
 var Header = React.createClass({
