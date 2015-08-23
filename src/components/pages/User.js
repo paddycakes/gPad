@@ -1,5 +1,6 @@
 var React = require('react');
 var UsersApi = require('../../api/github/Users');
+var UserList = require('../users/UserList');
 
 var Users = React.createClass({
   getInitialState: function() {
@@ -8,33 +9,17 @@ var Users = React.createClass({
     };
   },
 
-  componentWillMount: function() {
-    this.setState( { users: UsersApi.getAll() });
+  componentDidMount: function() {
+    if (this.isMounted()) {
+      this.setState({users: UsersApi.getAll()});
+    }
   },
 
   render: function () {
-    var createUserRow = function(user) {
-      return (
-          <tr key={user.id}>
-            <td><a href={ "/#users/" + user.username}>{user.username}</a></td>
-            <td>{user.firstName} {user.lastName}</td>
-          </tr>
-      );
-    };
-
     return (
         <div>
           <h1>Github Users</h1>
-
-          <table className="table">
-            <thead>
-              <th>Username</th>
-              <th>Full Name</th>
-            </thead>
-            <tbody>
-            { this.state.users.map(createUserRow, this)}
-            </tbody>
-          </table>
+          <UserList users={this.state.users} />
         </div>
     );
   }
