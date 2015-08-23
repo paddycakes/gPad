@@ -18,7 +18,7 @@ var About = React.createClass({
             </ul>
           </p>
         </div>
-    )
+    );
   }
 });
 
