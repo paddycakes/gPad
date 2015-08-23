@@ -1,2 +1,2 @@
-# gitpad
-A Github user management application
+# gPad
+A Github User Management Console
